@@ -1,0 +1,5 @@
+# Runtime dependency for the MCP server (mcp_server.py).
+# The policy engine (store.py), the data generator (generate_data.py), and the
+# test suite (test_flow.py) run on the Python standard library alone, so
+# `python test_flow.py` works without installing anything.
+fastmcp>=2.0
