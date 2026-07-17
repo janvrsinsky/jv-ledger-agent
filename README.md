@@ -4,7 +4,9 @@
 
 **An accounting-ops agent that books what is provably safe and hands a human everything else. The policy gate lives in code, not in the prompt.**
 
-![status](https://img.shields.io/badge/status-demo-blue)
+**[▶ Watch it close yesterday's books, live](#demos)** · one command, eight payments: four auto-booked (including a USD FX reconcile), four refused with reasons, full audit trail printed.
+
+![status](https://img.shields.io/badge/status-runnable%20demo-blue)
 ![mirrors](https://img.shields.io/badge/mirrors-production%20automation-2ea44f)
 ![python](https://img.shields.io/badge/python-3.11-3776AB)
 ![mcp](https://img.shields.io/badge/tools-typed%20MCP-6e40c9)
@@ -12,6 +14,9 @@
 ![audit](https://img.shields.io/badge/audit%20trail-every%20decision-informational)
 ![HITL](https://img.shields.io/badge/human--in--the--loop-required-1f6feb)
 ![data](https://img.shields.io/badge/data-100%25%20synthetic-6aa84f)
+![tools](https://img.shields.io/badge/typed%20MCP%20tools-10%20(6%20read%20%2B%204%20write)-6e40c9) ![money](https://img.shields.io/badge/tools%20that%20can%20move%20money-0-critical) ![verdicts](https://img.shields.io/badge/policy%20verdicts-11%20in%20code-2ea44f)
+
+> **What this proves:** an LLM agent runs the full daily close, but a single in-code function (not the prompt) decides every booking, the write surface has zero tools that can move money, and every decision lands in an append-only audit log. Nine of its eleven policy verdicts are pinned as named branches by the test suite.
 
 ## What it is
 
@@ -37,7 +42,7 @@ This is a sanitized, synthetic-data demo of a bookkeeping automation I run in pr
 
 ## Demos
 
-Two short clips, recorded live against the running system. No mockups.
+Recorded live against the running system. No mockups.
 
 https://github.com/user-attachments/assets/b6d84570-0d60-4636-b906-fbd26feffc5a
 
@@ -107,7 +112,7 @@ I work AI-first: I direct tools like Claude Code to generate and refactor the im
 
 ## Status and contact
 
-**Demo.** Synthetic data, real engineering. It is one instance of a pattern I reuse across systems: an agent gets typed, allowlisted tools; a guardrail in code (not the prompt) gates every state change; and anything consequential waits for a human.
+**Runnable demo of a system I run in production.** Synthetic data, real engineering. It is one instance of a pattern I reuse across systems: an agent gets typed, allowlisted tools; a guardrail in code (not the prompt) gates every state change; and anything consequential waits for a human.
 
 - More systems and the shared architecture: [github.com/janvrsinsky](https://github.com/janvrsinsky)
 - LinkedIn: [linkedin.com/in/janvrsinsky](https://linkedin.com/in/janvrsinsky)
