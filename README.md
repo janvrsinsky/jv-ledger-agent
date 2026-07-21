@@ -88,7 +88,7 @@ flowchart TB
 - **Policy engine** (`store.py`) holding `evaluate_booking`, the single booking choke point, plus the audit log and approval queue as append-only JSON state.
 - **Synthetic data generator** (`generate_data.py`) that rebuilds a pristine, date-relative fixture, so any run starts clean and "yesterday" always resolves.
 - **Agent persona / system prompt** (`system_prompt.md`) that instructs the model to reconcile, book what the server allows, and escalate the rest with reasons. It has no authority over the policy gate; at most it wastes a tool call.
-- **Recording face:** a rebranded open-source LibreChat front end, used only to film the demo. It is disposable. The durable engineering is the server, the gate, and the audit trail, and the agent runs over any MCP-capable client.
+- **Recording front end:** a rebranded open-source LibreChat build, used only to film the demo. It is disposable. The durable engineering is the server, the gate, and the audit trail, and the agent runs over any MCP-capable client.
 
 ## Correctness
 
