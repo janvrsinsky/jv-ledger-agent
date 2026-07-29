@@ -1,0 +1,30 @@
+name: policy gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  gate:
+    name: policy gate, Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Nothing is installed on purpose. test_flow.py pins every hazard branch
+      # on the standard library alone, so a green build also shows the check
+      # needs no dependencies to reproduce.
+      - name: Run the policy gate
+        run: python test_flow.py

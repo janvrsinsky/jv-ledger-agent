@@ -6,6 +6,8 @@
 
 **[▶ Watch it close yesterday's books, live](#demos)** · one command, eight payments: four auto-booked (including a USD FX reconcile), four refused with reasons, full audit trail printed.
 
+[![policy gate](https://github.com/janvrsinsky/jv-ledger-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/janvrsinsky/jv-ledger-agent/actions/workflows/ci.yml)
+
 ![status](https://img.shields.io/badge/status-runnable%20demo-blue)
 ![mirrors](https://img.shields.io/badge/mirrors-production%20automation-2ea44f)
 ![python](https://img.shields.io/badge/python-3.11-3776AB)
@@ -92,7 +94,7 @@ flowchart TB
 
 ## Correctness
 
-Because the policy gate is deterministic, correctness here means pinning every hazard branch, not measuring a distribution. `test_flow.py` is that check: it isolates each hazard in a throwaway temp directory (so a run never touches the demo `state/` fixture), rebuilds fresh state, runs the exact flow the agent runs on camera, asserts one outcome per hazard, and exits non-zero on any drift.
+Because the policy gate is deterministic, correctness here means pinning every hazard branch, not measuring a distribution. `test_flow.py` is that check: it isolates each hazard in a throwaway temp directory (so a run never touches the demo `state/` fixture), rebuilds fresh state, runs the exact flow the agent runs on camera, asserts one outcome per hazard, and exits non-zero on any drift. GitHub Actions runs it on every push, so the badge at the top of this file is that gate rather than a build.
 
 | Hazard in the batch | Policy verdict | What the agent does |
 |---|---|---|
