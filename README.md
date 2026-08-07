@@ -96,7 +96,7 @@ Latent branches the engine also enforces and the suite guards: overpayment (`OVE
 
 ## Status and contact
 
-**PRODUCTION EXTRACT.** A sanitized public cut of a private system in real use. The architecture and method are real; data, names and some components are stand-ins, and the README lists which is which. The pattern repeats across my systems: typed, allowlisted tools; a guardrail in code gating every state change; a human before anything consequential.
+**PRODUCTION EXTRACT.** A sanitized public cut of a private system in real use. The architecture and method are real; data, names and some components are stand-ins, and the README lists which is which. The pattern repeats across my systems: typed, allowlisted tools; a guardrail in code gating every state change; a human before anything consequential. I direct AI coding tools to build it; the policy boundary, the capability limits, and the failure modes are mine.
 
 - More systems and the shared architecture: [github.com/janvrsinsky](https://github.com/janvrsinsky)
 - LinkedIn: [linkedin.com/in/janvrsinsky](https://linkedin.com/in/janvrsinsky)
